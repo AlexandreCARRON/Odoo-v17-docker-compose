@@ -71,7 +71,7 @@ services:
       - ./etc:/etc/odoo
     restart: always             # run as a service
     environment:
-      - VIRTUAL_HOST=odoo17, odoochat1
+      - VIRTUAL_HOST=odoo, odoochat
       - VIRTUAL_NETWORK=nginx-proxy
       - VIRTUAL_PORT=10017, 20017
       - LETSENCRYPT_HOST=atilfrance.fr
