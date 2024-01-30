@@ -41,7 +41,7 @@ services:
     image: postgres:16
     user: root
     environment:
-      - POSTGRES_USER=odoo
+      - POSTGRES_USER=odoo2
       - POSTGRES_PASSWORD=odoo17@2023
       - POSTGRES_DB=postgres
     restart: always             # run as a service
