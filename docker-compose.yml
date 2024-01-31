@@ -62,6 +62,11 @@ services:
       - HOST=db
       - USER=odoo
       - PASSWORD=minhng.info
+      - VIRTUAL_HOST=odoo, odoochat
+      - VIRTUAL_NETWORK=nginx-proxy
+      - VIRTUAL_PORT=10017, 20017
+      - LETSENCRYPT_HOST=atilfrance.fr
+      - LETSENCRYPT_EMAIL=archi.carron@gmail.com
     volumes:
       #- /etc/timezone:/etc/timezone:ro
       #- /etc/localtime:/etc/localtime:ro
@@ -70,10 +75,4 @@ services:
       - ./addons:/mnt/extra-addons
       - ./etc:/etc/odoo
     restart: always             # run as a service
-    environment:
-      - VIRTUAL_HOST=odoo, odoochat
-      - VIRTUAL_NETWORK=nginx-proxy
-      - VIRTUAL_PORT=10017, 20017
-      - LETSENCRYPT_HOST=atilfrance.fr
-      - LETSENCRYPT_EMAIL=archi.carron@gmail.com
     
