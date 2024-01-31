@@ -8,8 +8,8 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - "./etc/nginx/conf.d:/etc/nginx/conf.d:ro"
-      - "./etc/nginx/vhost.d:/etc/nginx/vhost.d:ro"
+      - "./etc/nginx/conf.d:/etc/nginx/conf.d:ro" #a creer dans github
+      - "./etc/nginx/vhost.d:/etc/nginx/vhost.d:ro" #a creer dans github
       - "/usr/share/nginx/html"
       - "./volumes/proxy/certs:/etc/nginx/certs:ro"
 
