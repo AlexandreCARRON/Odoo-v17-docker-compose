@@ -42,7 +42,7 @@ services:
     user: root
     environment:
       - POSTGRES_USER=odoo
-      - POSTGRES_PASSWORD=odoo17@2023
+      - POSTGRES_PASSWORD=minhng.info
       - POSTGRES_DB=postgres
     restart: always             # run as a service
     volumes:
@@ -61,7 +61,7 @@ services:
     environment:
       - HOST=db
       - USER=odoo
-      - PASSWORD=odoo17@2023
+      - PASSWORD=minhng.info
     volumes:
       #- /etc/timezone:/etc/timezone:ro
       #- /etc/localtime:/etc/localtime:ro
