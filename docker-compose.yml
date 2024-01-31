@@ -8,9 +8,9 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - "./volumes/etc/nginx/conf.d:/etc/nginx/conf.d:ro"
-      - "./volumes/etc/nginx/vhost.d:/etc/nginx/vhost.d:ro"
-      - "./volumes/usr/share/nginx/html:/usr/share/nginx/html:ro"
+      - "./etc/nginx/conf.d:/etc/nginx/conf.d:ro"
+      - "./etc/nginx/vhost.d:/etc/nginx/vhost.d:ro"
+      - "/usr/share/nginx/html"
       - "./volumes/proxy/certs:/etc/nginx/certs:ro"
 
   nginx-gen:
