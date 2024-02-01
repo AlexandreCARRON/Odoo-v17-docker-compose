@@ -58,7 +58,7 @@ proxy_set_header Proxy "";
 
 server {
 	server_name _; # This is just an invalid value which will never trigger on a real hostname.
-	listen 80;
+	listen 10017;
 	access_log /var/log/nginx/access.log vhost;
 	return 503;
 }
@@ -211,7 +211,7 @@ server {
 
 server {
 	server_name {{ $host }};
-	listen 80 {{ $default_server }};
+	listen 10017 {{ $default_server }};
 	access_log /var/log/nginx/access.log vhost;
 
 	{{ if (exists (printf "/etc/nginx/vhost.d/%s" $host)) }}
