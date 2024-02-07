@@ -1,17 +1,27 @@
 version: '2'
 services:
-  nginx:
-    restart: always
-    image: nginx
-    container_name: nginx
+  nginx-proxy-manager:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
+      - '80:80'
+      - '81:81'
+      - '443:443'
     volumes:
-      - "/etc/nginx/conf.d" 
-      - "/etc/nginx/vhost.d" 
-      - "/usr/share/nginx/html"
-      - "./volumes/proxy/certs:/etc/nginx/certs:ro"
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+#  nginx:
+#    restart: always
+#    image: nginx
+#    container_name: nginx
+#    ports:
+#      - "80:80"
+#      - "443:443"
+#    volumes:
+#      - "/etc/nginx/conf.d" 
+#      - "/etc/nginx/vhost.d" 
+#      - "/usr/share/nginx/html"
+#      - "./volumes/proxy/certs:/etc/nginx/certs:ro"
 
 #  nginx-gen:
 #    restart: always
