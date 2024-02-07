@@ -58,8 +58,7 @@ proxy_set_header Proxy "";
 
 server {
 	server_name _; # This is just an invalid value which will never trigger on a real hostname.
-	# listen 127.0.0.1:{{ .StreamPort }};
-	listen 127.0.0.1:10017;
+	listen 127.0.0.1:{{ .StreamPort }};
 	access_log /var/log/nginx/access.log vhost;
 	return 503;
 }
