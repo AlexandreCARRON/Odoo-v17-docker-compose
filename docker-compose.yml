@@ -18,6 +18,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
+      - "/etc/nginx/conf.d"
       - "/etc/nginx/vhost.d" 
       - "/usr/share/nginx/html"
       - "./volumes/nginx-sample-website/conf.d:/etc/nginx/conf.d" 
