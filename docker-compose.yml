@@ -18,7 +18,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ".volumes/nginx-sample-website/conf.d:/etc/nginx/conf.d:ro" 
+      - ".volumes/nginx-sample-website/conf.d:/etc/nginx/conf.d" 
       - "/etc/nginx/vhost.d" 
       - "/usr/share/nginx/html"
       - "./volumes/proxy/certs:/etc/nginx/certs:ro"
