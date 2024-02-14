@@ -76,7 +76,7 @@ services:
       - VIRTUAL_HOST=odoo, odoochat
       - VIRTUAL_NETWORK=nginx-proxy
       - VIRTUAL_PORT=10017, 20017
-      - LETSENCRYPT_HOST=prompt-formation.fr
+      - LETSENCRYPT_HOST=prompt-formation.com
       - LETSENCRYPT_EMAIL=archi.carron@gmail.com
     volumes:
       #- /etc/timezone:/etc/timezone:ro
