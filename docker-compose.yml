@@ -73,7 +73,7 @@ services:
       - HOST=db
       - USER=odoo
       - PASSWORD=minhng.info
-      - VIRTUAL_HOST=odoo, odoochat
+      - VIRTUAL_HOST=atilfrance.fr
       - VIRTUAL_NETWORK=nginx-proxy
       - VIRTUAL_PORT=10017, 20017
       - LETSENCRYPT_HOST=atilfrance.fr
